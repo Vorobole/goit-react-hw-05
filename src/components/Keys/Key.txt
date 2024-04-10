@@ -1,8 +1,6 @@
-Application ID
-584593
 
-Access Key
-HYDmQ3_W1ZMmH4KRJH6dpcjnRt00YJyuccJLUc0WKa0
+Ключ API
+214ee22855acf54e7fcd7bf0e79822af
 
-Secret key
-8E9EifP8YrphUvdvGPidp58w1N9a5n3v21dSUZDSx7A
+Токен доступу для читання API
+eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyMTRlZTIyODU1YWNmNTRlN2ZjZDdiZjBlNzk4MjJhZiIsInN1YiI6IjY2MTYzODk2NjZhMGQzMDEzMTJmY2ExOSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.J7eGnbKLR9F6bJsUmfFJMhAsK1MhfYu6aOsYPRb58Lc
