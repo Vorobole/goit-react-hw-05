@@ -1,0 +1,8 @@
+Application ID
+584593
+
+Access Key
+HYDmQ3_W1ZMmH4KRJH6dpcjnRt00YJyuccJLUc0WKa0
+
+Secret key
+8E9EifP8YrphUvdvGPidp58w1N9a5n3v21dSUZDSx7A
