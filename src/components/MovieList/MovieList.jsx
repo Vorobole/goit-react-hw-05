@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import css from "./MovieList.module.css";
 
-function MovieList({ movies, location }) {
+function MovieList({ movies }) {
   const [showMessage, setShowMessage] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -15,9 +16,6 @@ function MovieList({ movies, location }) {
     return () => clearTimeout(timeout);
   }, [movies]);
 
-  // Check if location is defined before accessing its properties
-  const currentPath = location?.pathname || "Unknown Path";
-
   if (showMessage) {
     return <div>No movies available</div>;
   }
@@ -27,7 +25,9 @@ function MovieList({ movies, location }) {
       <ul className={css.list}>
         {movies.map((movie) => (
           <li key={movie.id}>
-            <Link to={`/movies/${movie.id}`}>{movie.title}</Link>
+            <Link to={{ pathname: `/movies/${movie.id}`, state: { location } }}>
+              {movie.title}
+            </Link>
           </li>
         ))}
       </ul>
