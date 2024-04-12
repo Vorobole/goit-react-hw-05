@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { requestMovie } from "../Services/API";
 import MovieList from "../components/MovieList/MovieList";
 import { useLocation, useSearchParams } from "react-router-dom";
+
 export default function MoviesPage() {
   const location = useLocation();
   const [searchParams, setSearchParams] = useSearchParams();
@@ -40,7 +41,7 @@ export default function MoviesPage() {
         />
         <button type="submit">Search</button>
       </form>
-      <MovieList movies={movies} from={location} defLocation="/movies" />
+      {movies.length > 0 && <MovieList movies={movies} location={location} />}
     </div>
   );
 }

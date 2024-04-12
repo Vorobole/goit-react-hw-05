@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import css from "./MovieList.module.css";
 
-function MovieList({ movies }) {
+function MovieList({ movies, location }) {
   const [showMessage, setShowMessage] = useState(false);
 
   useEffect(() => {
@@ -14,6 +14,9 @@ function MovieList({ movies }) {
 
     return () => clearTimeout(timeout);
   }, [movies]);
+
+  // Check if location is defined before accessing its properties
+  const currentPath = location?.pathname || "Unknown Path";
 
   if (showMessage) {
     return <div>No movies available</div>;
